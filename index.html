@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Field Asset Capture App - User Manual</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .manual-container {
+            width: 720px;
+            min-height: 960px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 42px;
+            color: #1a73e8;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 20px;
+            color: #5f6368;
+        }
+
+        .section {
+            margin-bottom: 35px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            color: #1a73e8;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title .material-icons {
+            margin-right: 10px;
+            color: #1a73e8;
+            font-size: 32px;
+        }
+
+        .subsection {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .subsection-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            color: #4285f4;
+            margin-bottom: 10px;
+        }
+
+        .subsection-content {
+            margin-left: 20px;
+            font-size: 18px;
+        }
+
+        .feature-list {
+            list-style-type: none;
+            padding-left: 10px;
+        }
+
+        .feature-list li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 28px;
+            font-size: 18px;
+        }
+
+        .feature-list li:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            background-color: #4285f4;
+            border-radius: 50%;
+        }
+
+        .step-list {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+
+        .step-list li {
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+
+        .warning {
+            background-color: #fef7e0;
+            border-left: 4px solid #fbbc04;
+            padding: 12px 15px;
+            margin: 15px 0;
+            font-size: 18px;
+        }
+
+        .table-container {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            border: 1px solid #e0e0e0;
+            padding: 10px;
+            text-align: left;
+            font-size: 18px;
+        }
+
+        table th {
+            background-color: #f1f3f4;
+            color: #202124;
+            font-weight: 600;
+        }
+
+        .note {
+            font-style: italic;
+            color: #5f6368;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .background-shape {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(26, 115, 232, 0.1), rgba(66, 133, 244, 0.05));
+            z-index: 0;
+        }
+
+        .shape-1 {
+            top: -200px;
+            right: -100px;
+        }
+
+        .shape-2 {
+            bottom: -200px;
+            left: -100px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0;
+            color: #5f6368;
+            position: relative;
+ z-index: 1;
+            font-size: 18px;
+        }
+
+        .highlight {
+            background-color: rgba(66, 133, 244, 0.1);
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+
+        .key-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .key-feature .material-icons {
+            font-size: 36px;
+            color: #1a73e8;
+            margin-right: 15px;
+        }
+
+        .key-feature-text {
+            font-size: 20px;
+        }
+
+        .key-feature-text strong {
+            display: block;
+            color: #202124;
+        }
+
+        .key-feature-text span {
+            color: #5f6368;
+        }
+    </style>
+</head>
+<body>
+    <div class="manual-container">
+        <div class="background-shape shape-1"></div>
+        <div class="background-shape shape-2"></div>
+        
+        <div class="header">
+            <h1>Field Asset Capture App</h1>
+            <p>User Manual</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="material-icons">info</i>
+                1. Overview
+            </h2>
+            <p style="font-size: 20px;">The Field Asset Capture app is a <span class="highlight">web-based tool</span> designed for field technicians to capture asset photos with embedded GPS coordinates and metadata. The app works offline, storing all data locally until you're ready to export it.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="material-icons">stars</i>
+                2. Key Features
+            </h2>
+            
+            <div class="key-feature">
+                <i class="material-icons">photo_camera</i>
+                <div class="key-feature-text">
+                    <strong>Capture Photos with GPS</strong>
+                    <span>Photos include embedded GPS coordinates and metadata</span>
+                </div>
+            </div>
+            
+            <div class="key-feature">
+                <i class="material-icons">gps_fixed</i>
+                <div class="key-feature-text">
+                    <strong>Real-time GPS Tracking</strong>
+                    <span>Includes accuracy indicators for precise location data</span>
+                </div>
+div>
+            
+            <div class="key-feature">
+                <i class="i class="material-icons">storage</i>
+                <div class="key-feature-text">
+                    <strong>Offline Storage</strong>
+                    <span>All captured assets stored locally until export</span>
+                </div>
+            </div>
+            
+            <div class="key-feature">
+                <i class="material-icons">cloud_upload</i>
+                <div class="key-feature-text="key-feature-text">
+                    <strong>Export Data</strong>
+                    <span>Export as CSV or individual images with metadata</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="material-icons">play_arrow</i>
+                3. Getting Started
+            </h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">3.1 Accessing the App</h3>
+                <ul class="step-list">
+                    <li>Open the app in a modern browser (Chrome, Edge, Firefox, or Safari recommended)</li>
+                    <li>Grant camera and location permissions when prompted</li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3 class="subsection-title="subsection-title">3.2 Interface Overview</h3>
+                <div class="subsection-content">
+                    <ul class="feature-list">
+                        <li><strong>Camera View</strong> - Shows live camera feed</li>
+                        <li><strong>Capture Button</strong> - Large yellow button to take photos</li>
+li><strong>Control Buttons</strong> - Switch camera, toggle flash, export options</li>
+li><strong>Status Bar</strong> - Shows camera, GPS, and record count status</li>
+                        <li><strong>Asset Form</strong> - Appears after capturing a photo</li>
+                        <li><strong>Instructions Panel</strong> - Quick reference guide</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="material-icons">check_circle</i>
+            </div>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">4.1 Capturing Assets</h3>
+                <ul class="step-list">
+                    <li>Ensure GPS status shows "Active" (green icon)</li>
+                    <li>Point camera at the asset you want to document</li>
+                    <li>Tap the yellow camera button to capture</li>
+                    <li>Complete the asset details form:
+                        <ul class="feature-list">
+                            <li>Asset Number (required)</li>
+                            <li>Description (required)</li>
+                            <li>Notes (optional)</li>
+                        </ul>
+                    </li>
+                    <li>Click "Save Asset with GPS"</li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">4.2 Camera Controls</h3>
+                <ul class="feature-list">
+                    <li><strong>Switch Camera:</strong> Toggle between front and rear cameras</li>
+                    <li><strong>Flash:</strong> Turn flash on/off (if supported by device)</li>
+                    <li><strong>Retry Camera:</strong> If camera access fails, use this to retry</li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">4.3 Exporting Data</li>
+                <p>When you're back online or need to share your data:</p>
+                <ul class="feature-list">
+                    <li><strong>Export CSV:</strong> Creates a spreadsheet with all asset metadata
+                        <ul class="feature-list">
+                            <li>Includes: ID, asset number, description, GPS coordinates, timestamp</li>
+                        </ul>
+                    </li>
+                    <li><strong>Export Images:</strong> Downloads all captured images with embedded metadata
+                        <ul class class="feature-list">
+                            <li>Images are named with asset ID and number</li>
+                            <li>Each image contains visual metadata at the bottom</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="material-icons">gps_fixed</i>
+                5. GPS Functionality
+            </h2>
+            <div class="subsection-content">
+                <ul class="feature-list">
+                    <li>The app continuously tracks your location</li>
+                    <li>GPS accuracy is displayed in meters (lower is better)</li>
+                    <li>Green icon indicates active GPS lock</li>
+                    <li>Red icon indicates GPS issues (check device settings)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="material">build</i>
+                6. Troubleshooting
+            </h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">6.1 Camera Issues</h3>
+                <p>If camera doesn't start:</p>
+                <ul class="feature-list">
+                    <li>Check browser permissions</li>
+                    <li>Click "Retry Camera" button</li>
+                    <li>Ensure no other app is using the camera</li>
+                    <li>Restart your device if problems persist</li>
+                </ul>
+            </div>
+            
+            <div class="subsection">
+                <h3 class="subsection-title">6.2 GPS Problems</h3>
+                <p>If GPS won't lock:</p>
+                <ul class="feature-list">
+                    <li>Move to an area with clear sky view</li>
+                    <li>Check device location settings</li>
+                    <li>Ensure location services are enabled</li>
+                    <li>Wait 1-2 minutes for initial lock</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="material-icons">storage</i>
+                7. Data Management
+            </h2>
+            <div class="subsection-content">
+                <ul class="feature-list">
+                    <li>All data is stored locally in your browser</li>
+                </ul>
+                <div class="warning">
+                    <strong>To prevent data loss:</strong>
+                </div>
+                <ul class="feature-list">
+                    <li>Export regularly</li>
+                    <li>Don't clear browser storage</li>
+                    <li>Use the same device/browser for continued access</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="material-icons">thumb_up</i>
+                8. Best Practices
+ </div>
+            <div class="subsection-content">
+                <ul class="feature-list">
+                    <li>Verify GPS accuracy before capturing critical assets</li>
+                    <li>Use descriptive asset numbers for easy reference</li>
+                    <li>Add detailed notes when the situation is complex</li>
+                    <li>Export data at the end of each work session</li>
+                    <li>For large projects, export periodically as backup</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="material-icons">devices</i>
+                <li>Modern browser with camera access</li>
+                    <li>Device with GPS capabilities</li>
+                    <li>Recommended: Chrome or Edge on Android, Safari on iOS</li>
+                    <li>Minimum: Android 8+, iOS 13+, or desktop equivalent</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="material-icons">support_agent</i>
+                10. Support
+            </h2>
+            <p>For additional help, contact your system administrator or the app development team. Include details about:</p>
+            <ul class="feature-list">
+                <li>Your device model</li>
+                <li>Browser version</li>
+                <li>Steps to reproduce any issues</li>
+                <li>Screenshots of error messages if available</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="material-icons">security</i>
+                Privacy & Security
+            </h2>
+            <div class="subsection-content">
+                <p>This app is designed for field use with intermittent connectivity. All data remains on your device until explicitly exported, ensuring privacy and security of your field observations.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Field Asset Capture App - User Manual</p>
+        </div>
+    </div>
+</body>
+</html>
